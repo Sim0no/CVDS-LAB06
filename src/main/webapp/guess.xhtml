@@ -7,8 +7,8 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	<link rel="stylesheet" type="text/css" href="style.css"></link>
     </h:head>
     <h:body>
-        <h:form id="guess_form">
-            <h:panelGrid id = "panel" columns = "1" 
+        <h:form id="guess_form" class="principalPanel">
+            <h:panelGrid class = "panel" columns = "1" 
             cellpadding = "10" cellspacing = "1">
 		<h1 class = "titulo">Bienvenido al juego, Adivine un numero entre 1 y 30!!!</h1>
                 <p:outputLabel value="#{guessBean.numeroAdivinar}" class="adivinar"></p:outputLabel>

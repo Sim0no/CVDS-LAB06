@@ -1,10 +1,11 @@
-#guess_form{
+.principalPanel{
 	position:absolute;
 	right:50%;
+        background-color:aqua;
 }
-#panel{
+.panel{
 	position:relative;
-	left:50%;
+	
 }
 .lista{
 	border:1.5px solid black;
