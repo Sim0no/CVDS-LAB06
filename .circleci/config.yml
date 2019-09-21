@@ -39,3 +39,15 @@ jobs:
 
       # run tests!
       - run: mvn integration-test
+  deploy:
+    machine:
+        enabled: true
+    working_directory: ~/circleci-demo-workflows
+    environment:
+      HEROKU_APP: "sleepy-refuge-55486"
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:3e1e8b8b-bfe9-45bc-932f-195d6559da20@git.heroku.com/guessthe-number.git master
