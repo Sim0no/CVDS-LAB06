@@ -41,13 +41,13 @@ public class AServlet extends HttpServlet{
             responseWriter.write(todosToHTMLTable(lista));
        }
        catch(java.lang.NumberFormatException e){
-           responseWriter.write("requerimiento inválido");
+           responseWriter.write("requerimiento invï¿½lido");
        }
        catch(java.net.MalformedURLException k){
            responseWriter.write("error interno en el servidor");
        }
        catch(Exception n){
-           responseWriter.write("requerimiento inválido");
+           responseWriter.write("requerimiento invï¿½lido");
        }                          
    }
     /**
@@ -69,13 +69,13 @@ public class AServlet extends HttpServlet{
             responseWriter.write(todosToHTMLTable(lista));
        }
        catch(java.lang.NumberFormatException e){
-           responseWriter.write("requerimiento inválido");
+           responseWriter.write("requerimiento invï¿½lido");
        }
        catch(java.net.MalformedURLException k){
            responseWriter.write("error interno en el servidor");
        }
        catch(Exception n){
-           responseWriter.write("requerimiento inválido");
+           responseWriter.write("requerimiento invï¿½lido");
        }                          
    }
    

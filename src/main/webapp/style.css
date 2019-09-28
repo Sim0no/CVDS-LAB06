@@ -1,36 +1,75 @@
-.principalPanel{
-	position:absolute;
-	right:50%;
-    background-image:url("img/panelBg.jpg");
-    background-repeat: no-repeat;
-    
-}
-.panel{
-	position:relative;
-        font-size:15px;
+.col{
+	background-color: rgba(0, 0, 0, 0.2);
+	opacity: 0.8;
 	
 }
-.lista{
-	border:1.5px solid black;
-	font-size:30px;
-	background-color:SpringGreen;
-	opacity:0.8;color:black;
-        
+.list-group-item {
+	background-image:url("img/bgi.jpg");
+	border-top: 1px solid rgba(0, 0, 0, 0.5);
+	border-left: 0.5px solid rgba(0, 0, 0, 0.5);
+	border-right: 0.5px solid rgba(0, 0, 0, 0.5);
+	border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	fill-opacity: 0.8;
 }
+li{
+	font-family: "Times New Roman", Times, serif;
+	font-size:16px;
 
-.adivinar{
-	display:none;
-	position:relative;
 }
-.titulo{
-	font-size:26px;
+h2{
+	font-family: 'Arvo';
+	font-size:16px;
+	font-weight:bold;
+	position: relative;
+	right:-20%;
 }
 .mensajeA{
-	color:red;
+	position: relative;
+	font-family: 'Arvo';
+	font-size:16px;
 	font-weight:bold;
-	
 }
-.botones{
+.lista{
+	border: 1px solid grey;
+	font-weight:bold;
+	background-color:black;
+	color:white;
+	position: relative;
+	right:-20%;
+}
+.mensajeA{
+	position: relative;
+	right:-20%;
+}
+.elemento{
+	position: relative;
+	right:-20%;	
+}
+#fila2{
+	background-color:rgba(0, 0, 0, 0.8);
+	height:300px;
+}
+div{
+	overflow-x:hidden;
+}
+nav{
+	width:100%;
+}
+#fila3{
+	height: 40px;
+	width:100%;
+	background-color:whitesmoke;
+}
+p{
+	color:white;
+}
+img{
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+.imagen1{
 	position:relative;
-	right:50%;
+	right:-100%;
 }

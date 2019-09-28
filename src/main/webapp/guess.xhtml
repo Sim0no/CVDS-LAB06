@@ -4,29 +4,66 @@ xmlns:h="http://xmlns.jcp.org/jsf/html"
 xmlns:p="http://primefaces.org/ui"
 xmlns:ui="http://java.sun.com/jsf/facelets">
     <h:head>
-	<link rel="stylesheet" type="text/css" href="style.css"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </h:head>
     <h:body>
-        <h1 class = "titulo">Bienvenido al juego, Adivine un numero entre 1 y 30!!!</h1>
-        <h:form id="guess_form" class="principalPanel">
-            <h:panelGrid class = "panel" columns = "1" 
-            cellpadding = "5" cellspacing = "1">		
-                <p:outputLabel value="#{guessBean.numeroAdivinar}" class="adivinar"></p:outputLabel>
-                <p:outputLabel value="#{guessBean.mensajeActual}" id="mensajeA" class="mensajeA"></p:outputLabel>               
-		<h2>Posible premio</h2>
-                <p:outputLabel value="#{guessBean.premio}"></p:outputLabel>
-		<h2>Numero Intentos</h2>
-		<p:outputLabel value="#{guessBean.numeroIntentos}"></p:outputLabel>
-		<h2>Lista Intentos fallidos</h2>
-        		<ui:repeat var="item" value="#{guessBean.intentos}">				  
-        			<h:outputText value="#{item}" class="lista"/>				    
-        		</ui:repeat>
-                <p:inputText id="numero" binding="#{numero}"></p:inputText>
-                <div class="botones">
-                    <p:commandButton value="Adivinar" update="guess_form" actionListener="#{guessBean.guess(numero.value)}"></p:commandButton>
-                    <p:commandButton value="Reiniciar" update="guess_form" actionListener="#{guessBean.reStart}"></p:commandButton>
-                </div>
-            </h:panelGrid>
-        </h:form>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">Guess the Number</a>
+        </nav>
+        <div class="row">
+                
+                    <div class="col">
+                        
+                    </div>
+                    <div class="col">
+                            <h:form id="guess_form">
+                                <ul class="list-group">
+                                    <li class="list-group-item" style="display:none;position:relative;"><p:outputLabel value="#{guessBean.numeroAdivinar}" class="adivinar"></p:outputLabel></li>
+                                    <li class="list-group-item"><p:outputLabel value="#{guessBean.mensajeActual}" id="mensajeA" class="mensajeA"></p:outputLabel></li>
+                                    <li class="list-group-item"><h2>Posible premio</h2></li>
+                                    <li class="list-group-item"><p:outputLabel value="#{guessBean.premio}" class="elemento"></p:outputLabel></li>
+                                    <li class="list-group-item"><h2>Numero Intentos</h2></li>
+                                    <li class="list-group-item"><p:outputLabel value="#{guessBean.numeroIntentos}" class="elemento"></p:outputLabel></li>
+                                    <li class="list-group-item"><h2>Lista Intentos fallidos</h2></li>
+                                    <li class="list-group-item">
+                                        <ui:repeat var="item" value="#{guessBean.intentos}" >				  
+                                            <h:outputText value="#{item}" class="lista"/>				    
+                                        </ui:repeat>
+                                    </li>
+                                    <p:inputText id="numero" binding="#{numero}"></p:inputText>
+                                </ul>
+                                <div class="botones">
+                                    <p:commandButton value="Adivinar" update="guess_form" actionListener="#{guessBean.guess(numero.value)}"></p:commandButton>
+                                    <p:commandButton value="Reiniciar" update="guess_form" actionListener="#{guessBean.reStart}"></p:commandButton>
+                                </div>
+                            </h:form>
+                    </div>
+                    <div class="col">
+                     
+                    </div>
+                
+        </div>
+        <div class="row" id="fila2"> 
+                <div class="col">
+                    <img src="img/desc2.jpg" class="imagen1"/>
+                </div>   
+                <div class="col">
+                    <p>
+                        El juego consiste en adivinar un numero
+                        entre 1 y 30, espero que te diviertas!!.
+                    </p>
+                </div> 
+                <div class="col">
+                    <img src="img/desc1.jpg"/>
+                </div> 
+        </div> 
+        <div class="row" id="fila3"> 
+        </div> 
     </h:body>
 </html>

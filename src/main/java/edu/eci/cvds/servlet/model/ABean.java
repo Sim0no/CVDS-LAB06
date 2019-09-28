@@ -149,7 +149,7 @@ public class ABean{
 	           intentos.add(intento);
 	       }
 	       else if (premio<=0){	    	   
-	           setMensajeActual("Ya no puedes realizar mas intentos, por favor reinicie el juego.");	         
+	           setMensajeActual("Ya no puedes realizar mas intentos");	         
 	       }
 	       else if(!esGanador & intento==numeroAdivinar & premio>=0){
 	    	   numeroIntentos +=1;
@@ -157,7 +157,7 @@ public class ABean{
 	           this.esGanador = true;
 	       }
 	       else {
-	    	   setMensajeActual("Premio: "+premio+". Pulse reiniciar para jugar con nosotros de nuevo.");
+	    	   setMensajeActual("Premio: "+premio+". Pulse reiniciar");
 	       }
 
        
